@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class HardwareRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public int id;
+    public Integer id;
     public String hardware;
     public String parameters;
     public String comment;
