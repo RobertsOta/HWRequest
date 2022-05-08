@@ -1,25 +1,19 @@
 package com.example.autenticatask;
-
 import javax.persistence.*;
 
-
+                                                            //Spring frameworks automātiski izveido datubāzē tabulu no tās klases mainīgajiem,
+                                                            //kura norādīta tieši pēc @Entity anotācijas
 @Entity
 public class HardwareRequest {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id                                                     //Tiek definēts, ka nākošais mainīgais aiz @Id būs primary key izveidotajā tabulā.
+    @GeneratedValue(strategy = GenerationType.AUTO)         //Tiek definēts, ka id mainīgais būs automātiski ģenerēta vērtība
     private Integer id = 1;
     private String hardware;
     private String parameters;
     private String comment;
     private String date;
 
-//    @Basic
-//    private java.sql.Timestamp sqlTimestamp;
-
-
-    public Integer getId() {
-        return id;
-    }
+    public Integer getId() { return id; }                   //Tiek definēti seteri un geteri, lai varētu dabūt vai mainīt šīs klases mainīgo vērtības
 
     public void setId(Integer id) {
         this.id = id;
