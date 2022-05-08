@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hardware request application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="/addrequest" method="POST">
+    <p>Izvēlies datortehniku</p>
+
+    <div>
+        <label for="hardware">Datortehnika:</label>
+        <select id="hardware" name="hardware">
+            <option value="Monitors">Monitors</option>
+            <option value="Klaviatūra">Klaviatūra</option>
+            <option value="Vebkamera">Vebkamera</option>
+            <option value="Dators">Dators</option>
+        </select>
+
+    </div>
+
+    <div>
+        <label for="parameters">Parametri:</label>
+        <input name="parameters" id="parameters">
+    </div>
+    <div>
+        <label for="comment">Komentārs:</label>
+        <input name="comment" id="comment">
+    </div>
+    <div>
+        <button>Izveidot pieprasījumu</button>
+    </div>
+</form>
+<form action="/myRequests" method="GET">
+    <div>
+        <button>Mani pieprasījumi</button>
+    </div>
+</form>
+</body>
+</html>

@@ -1,25 +1,27 @@
 package com.example.autenticatask;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 
 @Entity
 public class HardwareRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Integer id;
-    public String hardware;
-    public String parameters;
-    public String comment;
+    private Integer id = 1;
+    private String hardware;
+    private String parameters;
+    private String comment;
+    private String date;
+
+//    @Basic
+//    private java.sql.Timestamp sqlTimestamp;
 
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -45,5 +47,13 @@ public class HardwareRequest {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
